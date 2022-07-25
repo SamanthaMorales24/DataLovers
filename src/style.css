@@ -1,0 +1,62 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Helvetica, sans-serif;
+    background-image: url(https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2021/10/castillo-hogwarts-dreams-ps4-2511049.jpg?itok=VI89-7Hi);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    justify-content: center;
+    align-content: center;  
+    text-align: center;
+  }
+
+ 
+  .container {
+    display: flex; 
+    justify-content: center;
+   }
+
+  #Gryffindor {
+    background-color:#aa0e2e;
+    color: white;
+    border-radius: 10px;
+    padding: 50px 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  #Ravenclaw {
+    background-color:#1c1787;
+    color: white;
+    border-radius: 10px;
+    padding: 50px 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+ 
+  #Slytherin {
+    background-color:#225f1c;
+    color: white;
+    border-radius: 10px;
+    padding: 50px 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  #Hufflepuff {
+    background-color:#e6c417;
+    color: black;
+    border-radius: 10px;
+    padding: 50px 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }

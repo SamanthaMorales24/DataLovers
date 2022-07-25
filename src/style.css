@@ -1,84 +1,94 @@
-html, body {
-    height: 100%;
-    width: 100%;
-    font-family: Helvetica, sans-serif;
-    background-image: url(https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2021/10/castillo-hogwarts-dreams-ps4-2511049.jpg?itok=VI89-7Hi);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    justify-content: center;
-    align-content: center;  
-    text-align: center;
-}  
- 
-  .container {
-    display: flex; 
-    justify-content: center;
-    background-color: #5494a700;
-   }
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Helvetica, sans-serif;
+  background-image: url(https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2021/10/castillo-hogwarts-dreams-ps4-2511049.jpg?itok=VI89-7Hi);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
 
-  #Gryffindor {
-    background-image: url("images/ButtonG.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color:#61020000;
-    background-position: center;
-    color: white;
-    border-radius: 10px;
-    padding: 80px 80px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-  }
+.container {
+  display: flex;
+  justify-content: center;
+}
 
-  #Ravenclaw {
-    background-image: url("images/buttonR.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color:#0e3a4800;
-    background-position: center;
-    border-radius: 10px;
-    padding: 80px 80px;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-  }
- 
-  #Slytherin {
-    background-image: url("images/buttonS.png");
-    background-repeat: no-repeat;
-    background-color:#07342b00;
-    background-size: contain;
-    background-position: center;
-    color: black;
-    border-radius: 10px;
-    padding: 80px 80px;
-    display: flex;
-    justify-content: left;
-    margin: auto;
-  }
+#Gryffindor {
+  background-image: url("images/ButtonG.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #610100;
+  background-position: center;
+  color: white;
+  border-radius: 10px;
+  padding: 80px 80px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
 
-  #Hufflepuff {
-    background-image: url("images/buttonHH.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color:#eeb31d00;
-    color: black;
-    border-radius: 10px;
-    padding: 80px 80px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-  }
-    
-  #titulo {
-    font-family: 'Harry Potter', sans-serif;
-    font-size: 40px;
-  }
+#Ravenclaw {
+  background-image: url("images/buttonR.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #0e3a48;
+  background-position: center;
+  border-radius: 10px;
+  padding: 80px 80px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#Slytherin {
+  background-image: url("images/buttonS.png");
+  background-repeat: no-repeat;
+  background-color: #07342b;
+  background-size: contain;
+  background-position: center;
+  color: black;
+  border-radius: 10px;
+  padding: 80px 80px;
+  display: flex;
+  justify-content: left;
+  margin: auto;
+}
+
+#Hufflepuff {
+  background-image: url("images/buttonHH.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #eeb31d;
+  color: black;
+  border-radius: 10px;
+  padding: 80px 80px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#titulo {
+  font-family: "Harry Potter", sans-serif;
+  font-size: 40px;
+}
+
+
+#barra {
+  background-color: #eeb012;
   
+}
  
+
+#figura {
+  background-color: #eeb012;
+  
+}
+

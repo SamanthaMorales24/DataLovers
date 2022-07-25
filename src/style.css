@@ -17,10 +17,14 @@ html, body {
    }
 
   #Gryffindor {
-    background-color:#aa0e2e;
+    background-image: url("images/ButtonG.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color:#610100;
+    background-position: center;
     color: white;
     border-radius: 10px;
-    padding: 50px 50px;
+    padding: 80px 80px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -28,10 +32,14 @@ html, body {
   }
 
   #Ravenclaw {
-    background-color:#1c1787;
-    color: white;
+    background-image: url("images/buttonR.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color:#0e3a48;
+    background-position: center;
     border-radius: 10px;
-    padding: 50px 50px;
+    padding: 80px 80px;
+    color: white;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -39,23 +47,35 @@ html, body {
   }
  
   #Slytherin {
-    background-color:#225f1c;
-    color: white;
+    background-image: url("images/buttonS.png");
+    background-repeat: no-repeat;
+    background-color:#07342b;
+    background-size: contain;
+    background-position: center;
+    color: black;
     border-radius: 10px;
-    padding: 50px 50px;
+    padding: 80px 80px;
+    display: flex;
+    justify-content: left;
+    margin: auto;
+  }
+
+  #Hufflepuff {
+    background-image: url("images/buttonHH.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:#eeb31d;
+    color: black;
+    border-radius: 10px;
+    padding: 80px 80px;
     text-align: center;
     display: flex;
     justify-content: center;
     margin: auto;
   }
-
-  #Hufflepuff {
-    background-color:#e6c417;
-    color: black;
-    border-radius: 10px;
-    padding: 50px 50px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: auto;
+    
+  #titulo {
+    font-family: 'Harry Potter', sans-serif;
+    font-size: 40px;
   }

@@ -80,15 +80,74 @@ body {
   font-size: 40px;
 }
 
-
-#barra {
-  background-color: #eeb012;
-  
-}
- 
-
 #figura {
   background-color: #eeb012;
-  
+}
+
+#barraG {
+  background-color:#610200;  
+  color: white;  
+  display: flex;
+  border-radius: 10px;
+  text-align: left;
+  padding: 12px;
+  display: flex;
+  justify-content: left;
+  margin: auto;
+}
+#barraH {
+  background-color:#eeb31d;
+  color: white;  
+  display: flex;
+  text-align: left;
+  padding: 12px;
+  display: flex;
+  justify-content: left;
+  margin: auto;
+}
+#barraR {
+  background-color:#0e3a48;
+  color: white;  
+  display: flex;
+  text-align: left;
+  padding: 12px;
+  display: flex;
+  justify-content: left;
+  margin: auto;
+}
+#barraS {
+  background-color:#063b17;
+  color: white;  
+  display: flex;
+  text-align: left;
+  padding: 12px;
+  display: flex;
+  justify-content: left;
+  margin: auto;
+}
+
+#Inicio {
+  text-align: center;
+  padding: 10px 10px;
+}
+
+#Clases {
+  text-align: center; 
+  padding: 10px 10px;
+}
+
+#Hechizos {
+  text-align: center; 
+  padding: 10px 10px;
+}
+
+#Criaturas_Mágicas {
+  text-align: center; 
+  padding: 10px 10px;
+}
+
+#Datos_Curiosos {
+  text-align: center; 
+  padding: 10px 10px;
 }
 

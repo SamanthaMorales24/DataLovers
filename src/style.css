@@ -80,8 +80,19 @@ body {
   font-size: 40px;
 }
 
-#figura {
-  background-color: #eeb012;
+a:link {
+  font-size:20px;
+  color:whitesmoke
+}
+
+a:visited {
+  font-size:20px;
+  color:rgb(155, 155, 155)
+}
+
+a:hover{
+  font-size:23px;
+
 }
 
 #barraG {

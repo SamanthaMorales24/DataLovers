@@ -13,6 +13,7 @@ body {
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -28,7 +29,7 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin: 20px;
 }
 
 #Ravenclaw {
@@ -43,7 +44,7 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin: 20px;
 }
 
 #Slytherin {
@@ -57,7 +58,7 @@ body {
   padding: 80px 80px;
   display: flex;
   justify-content: left;
-  margin: auto;
+  margin: 20px;
 }
 
 #Hufflepuff {
@@ -72,7 +73,7 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin: 20px;
 }
 
 #titulo {
@@ -152,6 +153,11 @@ a:hover{
   padding: 10px 10px;
 }
 
+#Pociones {
+  text-align: center; 
+  padding: 10px 10px;
+}
+
 #Criaturas_Mágicas {
   text-align: center; 
   padding: 10px 10px;
@@ -161,5 +167,3 @@ a:hover{
   text-align: center; 
   padding: 10px 10px;
 }
-
-

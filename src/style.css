@@ -167,3 +167,17 @@ a:hover{
   text-align: center; 
   padding: 10px 10px;
 }
+
+.contenedor{
+  width: 900px;
+  height: 850px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("images/Libro2.png");
+ 
+}
+
+#fondo_G {
+  background-image: url("images/Gryffindor-Background.jpg");
+}
+

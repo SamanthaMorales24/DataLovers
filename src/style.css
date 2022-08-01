@@ -93,7 +93,6 @@ a:visited {
 
 a:hover{
   font-size:23px;
-
 }
 
 #barraG {
@@ -167,17 +166,66 @@ a:hover{
   text-align: center; 
   padding: 10px 10px;
 }
-
+/*
 .contenedor{
   width: 900px;
   height: 850px;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("images/Libro2.png");
+  text-align: center;
+  justify-content: center;
+ 
+}
+*/
+
+#Fondo_G {
+  background-image: url("images/Gryffindor-Background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.flexbox-container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 900px;
+  background-image: url("images/Libro2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: inherit;
+ }
+
+#izq {
+  margin-top: 5%;
+  padding-top: 5%;
+  text-align: match-parent;
+  display: flex;
+  align-items: flex-start;
+  vertical-align: inline-block;
+}
+
+#der {
+  margin-top: 5%;
+  padding-top: 5%;
+  text-align: match-parent;
+  display: flex;
+  align-items: flex-start;
+}
+
+/*
+.flexbox-container > div {
+  width: 50%;
+  max-height: 50%;
+  padding: 10px 10px;
+  
  
 }
 
-#fondo_G {
-  background-image: url("images/Gryffindor-Background.jpg");
-}
+.flexbox-container > div:first-child {
+  
+  margin-right: 10px;
+}*/
 

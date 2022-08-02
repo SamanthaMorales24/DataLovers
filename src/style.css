@@ -166,18 +166,6 @@ a:hover{
   text-align: center; 
   padding: 10px 10px;
 }
-/*
-.contenedor{
-  width: 900px;
-  height: 850px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("images/Libro2.png");
-  text-align: center;
-  justify-content: center;
- 
-}
-*/
 
 #Fondo_G {
   background-image: url("images/Gryffindor-Background.jpg");
@@ -185,47 +173,37 @@ a:hover{
   background-size: cover;
   background-attachment: fixed;
 }
-.flexbox-container {
-  display: flex;
-  justify-content: space-evenly;
-  height: 900px;
-  background-image: url("images/Libro2.png");
+
+#contenedor {
+  align-items:center;
+  justify-items: middle;
   background-size: contain;
+  }
+
+.flexbox-container {
+  width: 1000px!important;
+  height: 800px!important;
+  float:left;
+  background-image: url("images/Libro2.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: contain;
+  background-position: left;
   margin-left: 5%;
   margin-right: 5%;
-  text-align: inherit;
- }
-
-#izq {
-  margin-top: 5%;
-  padding-top: 5%;
-  text-align: match-parent;
-  display: flex;
-  align-items: flex-start;
-  vertical-align: inline-block;
+  text-align: left;
+  align-items: left;
+  position: left;
 }
 
-#der {
-  margin-top: 5%;
-  padding-top: 5%;
-  text-align: match-parent;
-  display: flex;
-  align-items: flex-start;
+#indice{
+  background-color: rgb(196, 178, 20);
+  display: inline-block;
+  flex-wrap: nowrap;
+  align-items: right;
+  justify-items: right;
+  background-size: cover;
+  position: right;
+  height: 100%;
+  width: 15%;
+  float:right;
 }
-
-/*
-.flexbox-container > div {
-  width: 50%;
-  max-height: 50%;
-  padding: 10px 10px;
-  
- 
-}
-
-.flexbox-container > div:first-child {
-  
-  margin-right: 10px;
-}*/
-

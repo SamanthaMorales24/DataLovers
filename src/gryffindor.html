@@ -9,25 +9,32 @@
 
 <body id="Fondo_G">
     <header id="barraG">
-        <a href="index.html" type="button" id="Inicio">Inicio</a>
-        <a href="#indice" type="button" id="Clases">Clases</a>
-        <a href="#indice" type="button" id="Pociones">Pociones</a>
-        <a href="#indice" type="button" id="Hechizos">Hechizos</a>
-        <a href="#indice" type="button" id="Criaturas_Mágicas">Criaturas Mágicas</a>
-        <a href="#indice" type="button" id="Datos_Curiosos">Datos Curiosos</a>
-     </header>
+        <nav id="indice">
+            <ul>
+        <button id="botonG"> <img src="./images/castle.png"
+            width="40" height="40" style="vertical-align:center"> <a href="index.html" id="Inicio">Inicio</a></button>
+        <button id="botonG"> <img src="./images/cauldron.png"
+            width="40" height="40" style="vertical-align:center"> <a href="#libro" id="pociones">Pociones</a></button>
+         <button id="botonG"> <img src="./images/magic-wand.png"
+            width="40" height="40" style="vertical-align:center"> <a href="#libro" id="hechizos">Hechizos</a></button>
+        <button id="botonG"> <img src="./images/dragon.png"
+            width="40" height="40" style="vertical-align:center"> <a href="#libro" id="criaturas" >Criaturas Magicas</a></button>
+        <button id="botonG"> <img src="./images/spell-book.png"
+            width="40" height="40" style="vertical-align:center"> <a href="#libro" id="datosCuriosos" >Datos Curiosos</a></button>
+        </nav>
+      </ul>
+    </nav>
+</header>
     
-     <div id="contenedor"> 
+    <nav id="filtro">
         
-        <div class="flexbox-container" id="libro" >  
+    </nav>
+
+     <section id="libro"> 
+     </section>
         
-         
-        </div>
-        
-         <aside id="indice"  class="portable-infobox" role="region">
-             <h2 id="titulo.figura">Indice</h2>
-             <section id="potions" class="indice" > </section> </aside>
-    </div>
+
+    
 
         <script src="main.js" type="module"></script>
         <script scr="data.js" type="module"></script>

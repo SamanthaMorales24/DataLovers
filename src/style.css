@@ -1,7 +1,7 @@
 body {
   height: 100%;
   width: 100%;
-  font-family: Helvetica, sans-serif;
+  font-family: Georgia;
   background-image: url(https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2021/10/castillo-hogwarts-dreams-ps4-2511049.jpg?itok=VI89-7Hi);
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,6 +15,7 @@ body {
   outline: 1px solid limegreen !important;
 } 
 */
+
 #btn {
   display: flex;
   flex-wrap: nowrap;
@@ -89,17 +90,17 @@ body {
 }
 
 a:link {
-  font-size:20px;
+  font-size:25px;
   color:whitesmoke
 }
 
 a:visited {
-  font-size:20px;
-  color:rgb(111, 111, 111)
+  font-size:25px;
+  color:rgb(226, 226, 226)
 }
 
 a:hover{
-  font-size:23px;
+  font-size:30px;
   color:rgb(0, 0, 0)
 }
 
@@ -174,41 +175,86 @@ a:hover{
   text-align: center; 
   padding: 10px 10px;
 }
-
+/*FONDOS CASAS*/
 #Fondo_G {
   background-image: url("images/Gryffindor-Background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
-
-#contenedor {
-  align-items:flex-start;
-  justify-items:flex-start;
-  background-size: contain;
-  }
-
-.flexbox-container {
-  height: 100%!important;
-  width: 70%!important;
-  float:left;
-  background-image: url("images/papyrus.png");
+#Fondo_S {
+  background-image: url("images/SlytherinB.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left;
-  text-align: left;
-  align-items: left;
-  position: left;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#Fondo_R {
+  background-image: url("images/RavenclawB.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#Fondo_H {
+  background-image: url("images/HufflepuffB.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
+#libro {
+  justify-items:center;
+  display:flex;
+  flex-wrap: wrap;
+  align-items:center;
+  }
+
 #indice{
-  background-color: rgb(211, 163, 31);
-  display: inline-block;
-  align-items: right;
-  justify-items: right;
+  align-items: left;
+  justify-items: left;
   background-size: cover;
-  position: right;
+  position: left;
   height: 100%;
   width: auto;
 }
 
+#tarjetita{
+  background-image: url("images/paper.jpg");
+  opacity: 0.9;
+  background-color: #4e05049a;
+  padding: 10px;
+  margin: 10px;
+  height: 30%;
+  width: 10%;
+  border-radius: 10px;
+}
+
+#tituloTarjeta {
+  color: rgb(56, 56, 56);
+  text-align: center;
+}
+
+#txtTarjeta{
+  color:aliceblue;
+}
+
+#filtro {
+  background-color:  rgb(211, 163, 31);;
+}
+
+/*botones*/
+
+#botonG {
+	box-shadow:inset 0px 1px 0px 0px #a6827e;
+	background:linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+	background-color:#7d5d3b;
+	border-radius:10px;
+	border:1px solid #54381e;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Georgia;
+	font-size:28px;
+	padding:7px 17px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #4d3534;
+}

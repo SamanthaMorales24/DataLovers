@@ -8,26 +8,27 @@ const descData = data.potions.description;
 
 for(let i= 0; i< potions.length; i++ ){
     let potionsData = `<li><a href="#libro" id=" ${potions[i].id}">${potions[i].name}</a></li>`;
-    
+
     document.getElementById("potions").innerHTML += potionsData;
-    
-    for(let i= 0; i< potions.length; i++ ){
-        let descData = `<p>${potions[i].description}</p>`;
-        document.getElementById("libro").innerHTML += descData;
+
+    if (potions.id >= 150) {
+        break;
     }
-    
+  
 }
+
+// const laPocion = descData.find(descData);
+
+for(let i= 0; i< potions.length; i++ ){
+    let descData = `<p>${potions[i].description}</p>`;
+    document.getElementById("libro").innerHTML += descData;
     
-    
-    console.log(potionsData);
+    if (potions.id >= 150) {
+        break;
+    }
+}
 
-
-
-
-
-
-
-
+console.log(potionsData);
 
 /*
 

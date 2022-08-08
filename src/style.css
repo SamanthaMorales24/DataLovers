@@ -15,10 +15,13 @@ body {
   outline: 1px solid limegreen !important;
 } 
 */
-.container {
+#btn {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
   justify-content: center;
+  
 }
 
 #Gryffindor {
@@ -180,21 +183,20 @@ a:hover{
 }
 
 #contenedor {
-  align-items:center;
-  justify-items: middle;
+  align-items:flex-start;
+  justify-items:flex-start;
   background-size: contain;
   }
 
 .flexbox-container {
- /* background-color: #063b17;*/
-  width: 1000px!important;
-  height: 800px!important;
+  height: 100%!important;
+  width: 70%!important;
   float:left;
-  background-image: url("images/Libro2.png");
+  background-image: url("images/papyrus.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
-    text-align: left;
+  text-align: left;
   align-items: left;
   position: left;
 }

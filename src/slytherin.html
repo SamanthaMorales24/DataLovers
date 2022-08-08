@@ -3,23 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
     <title>Slytherin</title>
 </head>
-<body>
-    <header id="barraS">
-        <a href="index.html" type="button" id="Inicio">Inicio</a>
-        <a href="Figure" type="button" id="Clases">Clases</a>
-        <a href="Figure" type="button" id="Pociones">Pociones</a>
-        <a href="Figure" type="button" id="Hechizos">Hechizos</a>
-        <a href="Figure" type="button" id="Criaturas_Mágicas">Criaturas Mágicas</a>
-        <a href="Figure" type="button" id="Datos_Curiosos">Datos Curiosos</a>
-     </header>
-     
-     <div class="contenedor">
-        
-    </div>
 
+<body id="Fondo_S">
+    <header id="barraS">
+        <nav id="indice">
+            <ul>
+        <button id="botonG"> <img src="./images/castle.png"
+            width="40" height="40" style="vertical-align:center"> <a href="index.html" id="Inicio">Inicio</a></button>
+        <button id="botonG"> <img src="./images/cauldron.png"
+            width="40" height="40" style="vertical-align:center"> <a href="#libro" id="pociones">Pociones</a></button>
+         <button id="botonG"> <img src="./images/magic-wand.png"
+            width="40" height="40" style="vertical-align:center"> <a href="#libro" id="hechizos">Hechizos</a></button>
+        <button id="botonG"> <img src="./images/dragon.png"
+            width="40" height="40" style="vertical-align:center"> <a href="#libro" id="criaturas" >Criaturas Magicas</a></button>
+        <button id="botonG"> <img src="./images/spell-book.png"
+            width="40" height="40" style="vertical-align:center"> <a href="#libro" id="datosCuriosos" >Datos Curiosos</a></button>
+        </nav>
+      </ul>
+    </nav>
+</header>
+    
+    <nav id="filtro">
+        
+    </nav>
+
+     <section id="libro"> 
+     </section>
+        
+
+    
+
+        <script src="main.js" type="module"></script>
+        <script scr="data.js" type="module"></script>
+        
      <footer id="Creado">Creado por Romina V <img src="./images/lunita.png"
         width="18" height="18" style="vertical-align:center"> y Samantha M. <img
         src="./images/unicorn.png" width="20" height="20"

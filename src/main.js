@@ -1,4 +1,4 @@
-import { example } from './data.js';
+import {filtroEspecie} from './data.js';
 import data from './data/harrypotter/data.js';
 //console.log(data.potions);
 
@@ -6,6 +6,7 @@ const limpiar = `<div></div>`;
 const potions = data.potions;
 const spells = data.spells;
 const funFacts = data.funFacts;
+const noHumanos = filtroEspecie(data.characters);
 
 
 const renderItemPotions = (id) => {
@@ -24,6 +25,7 @@ const renderItemPotions = (id) => {
     document.getElementById("libro").innerHTML += poster;
 
 };
+
 
 const renderItemSpells = (id) => {
         id = id -1;
@@ -72,8 +74,29 @@ const renderItemSpells = (id) => {
         document.getElementById("libro").innerHTML += poster;
     
     };
-    
 
+    const renderItemSpecies = (id) => {
+        id = id -1;
+        console.log(noHumanos);
+       let nombre = noHumanos[id].name;
+       let especies = noHumanos[id].description;
+       let ojos = noHumanos[id].eye_color;
+       let pelaje = noHumanos[id].hair_color;
+
+   
+       let poster = `
+       
+       <div id="tarjetita">
+           <h2 id="tituloTarjeta">Nombre: ${nombre}</h2>
+           <p id="txtTarjeta">Especie: ${especies}</p>
+           <p id="txtTarjeta">Color de Ojos: ${ojos}</p>
+           <p id="txtTarjeta">Pelaje: ${pelaje}</p>
+       </div> 
+       `;
+   
+       document.getElementById("libro").innerHTML += poster;
+   
+   };  
     
 
     window.addEventListener("load", indice, true);
@@ -94,7 +117,15 @@ const renderItemSpells = (id) => {
     data.facts = document.getElementById("libro").value;
     document.getElementById("libro").innerHTML = limpiar; 
     funFacts.forEach((e) => renderItemFunFacts(e.id));
-})};
+})
+document.getElementById("criaturas").addEventListener("click", function(){
+    data.characters = document.getElementById("libro").value;
+    document.getElementById("libro").innerHTML = limpiar; 
+    noHumanos.forEach((e) => renderItemSpecies(e.id));
+})
+
+};
+
 
 
     

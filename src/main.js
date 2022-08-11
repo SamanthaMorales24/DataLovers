@@ -10,14 +10,14 @@ const noHumanos = filtroEspecie(data.characters);
 
 
 const renderItemPotions = (id) => {
-     id = id -1;
+    id = id - 1;
     let nombre = potions[id].name;
     let descripcion = potions[id].description;
 
     let poster = `
     
     <div id="tarjetita">
-        <h2 id="tituloTarjeta">Nombre: ${nombre}</h2>
+        <h2 id="tituloTarjeta"> ${nombre}</h2>
         <p id="txtTarjeta">Descripción: ${descripcion}</p>
     </div> 
     `;
@@ -28,23 +28,23 @@ const renderItemPotions = (id) => {
 
 
 const renderItemSpells = (id) => {
-        id = id -1;
-        let nombre = spells[id].name;
-        let otroNombre = spells[id].other_name;
-        if (otroNombre === null){
-            otroNombre = "Información no disponible"
-        };
-        let pronunciacion = spells[id].pronunciation;
-        let tipoHechizo = spells[id].spell_type;
-        let descripcion = spells[id].description;
-        let mencion = spells[id].mention;
-        let etimologia = spells[id].etymology;
+    id = id - 1;
+    let nombre = spells[id].name;
+    let otroNombre = spells[id].other_name;
+    if (otroNombre === null) {
+        otroNombre = "Información no disponible"
+    };
+    let pronunciacion = spells[id].pronunciation;
+    let tipoHechizo = spells[id].spell_type;
+    let descripcion = spells[id].description;
+    let mencion = spells[id].mention;
+    let etimologia = spells[id].etymology;
 
 
-        let poster = `
+    let poster = `
         
         <div id="tarjetita">
-            <h2 id="tituloTarjeta">Nombre: ${nombre}</h2>
+            <h2 id="tituloTarjeta"> ${nombre}</h2>
             <p id="txtTarjeta">Nombre Alternativo: ${otroNombre}</p>
             <p id="txtTarjeta">Pronunciacion: ${pronunciacion}</p>
             <p id="txtTarjeta">Tipo de Hechizo: ${tipoHechizo}</p>
@@ -53,93 +53,91 @@ const renderItemSpells = (id) => {
             <p id="txtTarjeta">Etimologia: ${etimologia}</p>
         </div> 
         `;
-    
-        document.getElementById("libro").innerHTML += poster;
-    
-    };
 
-    const renderItemFunFacts = (id) => {
-        id = id -1;
-        let tipo = funFacts[id].type;
-        let contenido = funFacts[id].content;
-    
-        let poster = `
+    document.getElementById("libro").innerHTML += poster;
+
+};
+
+const renderItemFunFacts = (id) => {
+    id = id - 1;
+    let tipo = funFacts[id].type;
+    let contenido = funFacts[id].content;
+
+    let poster = `
         
         <div id="tarjetita">
             <h2 id="tituloTarjeta">Dato: ${tipo}</h2>
             <p id="txtTarjeta">Sabias...: ${contenido}</p>
         </div> 
         `;
-    
-        document.getElementById("libro").innerHTML += poster;
-    
-    };
 
-    const renderItemSpecies = (id) => {
-        id = id -1;
-        console.log(noHumanos);
-       let nombre = noHumanos[id].name;
-       let especies = noHumanos[id].description;
-       let ojos = noHumanos[id].eye_color;
-       let pelaje = noHumanos[id].hair_color;
+    document.getElementById("libro").innerHTML += poster;
 
-   
-       let poster = `
+};
+
+const renderItemSpecies = (character) => {
+    let nombre = character.name;
+    let especies = character.species;
+    let ojos = character.eye_color;
+    let pelaje = character.hair_color;
+
+
+    let poster = `
        
        <div id="tarjetita">
-           <h2 id="tituloTarjeta">Nombre: ${nombre}</h2>
+           <h2 id="tituloTarjeta"> ${nombre}</h2>
            <p id="txtTarjeta">Especie: ${especies}</p>
            <p id="txtTarjeta">Color de Ojos: ${ojos}</p>
            <p id="txtTarjeta">Pelaje: ${pelaje}</p>
        </div> 
        `;
-   
-       document.getElementById("libro").innerHTML += poster;
-   
-   };  
-    
 
-    window.addEventListener("load", indice, true);
+    document.getElementById("libro").innerHTML += poster;
 
-    function indice () {
-        document.getElementById("pociones").addEventListener("click", function(){
-            data.pociones = document.getElementById("libro").value;
-            document.getElementById("libro").innerHTML = limpiar;  
-            potions.forEach((e) => renderItemPotions(e.id));        
+};
+
+
+window.addEventListener("load", indice, true);
+
+function indice() {
+    document.getElementById("pociones").addEventListener("click", function () {
+        data.pociones = document.getElementById("libro").value;
+        document.getElementById("libro").innerHTML = limpiar;
+        potions.forEach((e) => renderItemPotions(e.id));
     });
 
-    document.getElementById("hechizos").addEventListener("click", function(){
+    document.getElementById("hechizos").addEventListener("click", function () {
         data.spells = document.getElementById("libro").value;
-        document.getElementById("libro").innerHTML = limpiar; 
+        document.getElementById("libro").innerHTML = limpiar;
         spells.forEach((e) => renderItemSpells(e.id));
-});
-    document.getElementById("datosCuriosos").addEventListener("click", function(){
-    data.facts = document.getElementById("libro").value;
-    document.getElementById("libro").innerHTML = limpiar; 
-    funFacts.forEach((e) => renderItemFunFacts(e.id));
-})
-document.getElementById("criaturas").addEventListener("click", function(){
-    data.characters = document.getElementById("libro").value;
-    document.getElementById("libro").innerHTML = limpiar; 
-    noHumanos.forEach((e) => renderItemSpecies(e.id));
-})
+    });
+    document.getElementById("datosCuriosos").addEventListener("click", function () {
+        data.facts = document.getElementById("libro").value;
+        document.getElementById("libro").innerHTML = limpiar;
+        funFacts.forEach((e) => renderItemFunFacts(e.id));
+    })
+    document.getElementById("criaturas").addEventListener("click", function () {
+        data.characters = document.getElementById("libro").value;
+        document.getElementById("libro").innerHTML = limpiar;
+        noHumanos.forEach((e) => renderItemSpecies(e));
+    })
 
 };
 
 
 
-    
 
 
-    
 
-    
+
+
+
 /*
 
 for(let i= 0; i< potions.length; i++ ){
-    let potionsData = `<li><button name"${potions[i].id}" id= "indiceX" value="${potions[i].name}" >${potions[i].name}</button></li>`; 
-    document.getElementById("potions").innerHTML += potionsData; 
-    
+    let potionsData = `<li><button name"${potions[i].id}" id= "indiceX" value="${potions[i].name}" >${potions[i].name}</button></li>`;
+    document.getElementById("potions").innerHTML += potionsData;
+
 }
 
 // href="#libro"
@@ -168,7 +166,7 @@ document.getElementById("indiceX").addEventListener(
 //     document.getElementById("libro").innerHTML += descData;
 //     if (i < 150 ){
 //         break
-//     }     
+//     }
 // }
 
 

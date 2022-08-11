@@ -1,4 +1,5 @@
-import {filtroEspecie} from './data.js';
+import {filtroEspecie, 
+    sortDataUp} from './data.js';
 import data from './data/harrypotter/data.js';
 //console.log(data.potions);
 
@@ -7,8 +8,9 @@ const potions = data.potions;
 const spells = data.spells;
 const funFacts = data.funFacts;
 const noHumanos = filtroEspecie(data.characters);
+const filterByAZ = sortDataUp(data.potions);
 
-
+console.log(sortDataUp);
 const renderItemPotions = (id) => {
     id = id - 1;
     let nombre = potions[id].name;
@@ -122,14 +124,8 @@ function indice() {
         noHumanos.forEach((e) => renderItemSpecies(e));
     })
 
+
 };
-
-
-
-
-
-
-
 
 
 /*

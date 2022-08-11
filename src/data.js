@@ -11,9 +11,21 @@ export const filtroEspecie = (characters) => {
   return noHumanos;
 
 };
+ /*
+export const ordenarAtoZ = (a, b) => {
+  const pocionesAZ = potions.function (a, b) {
+    return a.localeCompare(b);
 
-function ordenarAtoZ (a, b){
+  pociones.sort()
   return a - b;
+
+  console.log(pociones)
+}*/
+
+export const sortDataUp = (potions) => {
+  let filterByAZ = potions.sort((a,b) => a.potions.localeCompare(b.potions));
+  
+  return filterByAZ;  
 }
 
 

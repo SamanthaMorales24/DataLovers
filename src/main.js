@@ -1,5 +1,4 @@
-import {filtroEspecie, 
-    sortDataUp} from './data.js';
+import { filtroEspecie, sortAZ, sortZA } from './data.js';
 import data from './data/harrypotter/data.js';
 //console.log(data.potions);
 
@@ -8,9 +7,30 @@ const potions = data.potions;
 const spells = data.spells;
 const funFacts = data.funFacts;
 const noHumanos = filtroEspecie(data.characters);
-const filterByAZ = sortDataUp(data.potions);
+const orderAZ= sortAZ(data);
+const orderZA= sortZA(data);
 
-console.log(sortDataUp);
+console.log(orderZA);
+console.log(orderAZ);
+
+const ordenar = (orden) => {
+switch (orden) {
+    case "az":
+        renderItemPotions(sortAZ(data))
+        break;
+
+    case "za":
+        renderItemPotions(sortZA(data))
+        break;
+    default:
+        break;
+}
+
+};
+
+
+
+
 const renderItemPotions = (id) => {
     id = id - 1;
     let nombre = potions[id].name;

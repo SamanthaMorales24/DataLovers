@@ -1,5 +1,3 @@
-// estas funciones son de ejemplo
-
 import data from "./data/harrypotter/data.js";
 
 
@@ -11,19 +9,58 @@ export const filtroEspecie = (characters) => {
   return noHumanos;
 
 };
+/*
+export const sortAZ = (data(name)) => {
 
+const orderAZ = name.sort((a, b) => a - b);
+return orderAZ;
+};
+
+export const sortZA = (name) => {
+
+const orderZA = name.sort((a, b) => b - a);
+return orderZA;
+};
+*/
+
+const sortAZ=(Data,sortBy) => {
+  let orderAZ = name.sort((a, b) => {
+    if (a[sortBy] > b[sortBy]) {
+      return 1;
+    }
+    if (a[sortBy] < b[sortBy]) {
+      return -1;
+    }
+  })
+  return orderAZ;
+}
+export { sortAZ };
+
+const sortZA=(Data,sortBy) => {
+  let orderZA = data.sort(function (a,b){
+    if (a[sortBy]>b[sortBy]){
+      return -1;
+    }
+    if (a[sortBy]<b[sortBy]){
+      return 1;
+    }
+  })
+  return orderZA;
+}
+export { sortZA };
+
+/*
 export function sortAZ(name){
   let orderAZ = name.sort((a, b) => (a.name > b.name ? 1 : -1));
   console.log(orderAZ)
-  return orderAZ
-  
+  return orderAZ;
 }
 
 export function sortZA(name){
   let orderZA = name.sort((a, b) => (a.name > b.name ? -1 : 1));
   console.log(orderZA)
   return orderZA;
-}
+}*/
  /*
 export const ordenarAtoZ = (a, b) => {
   const pocionesAZ = potions.function (a, b) {

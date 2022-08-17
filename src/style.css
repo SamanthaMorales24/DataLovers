@@ -10,10 +10,11 @@ body {
   align-content: center;
   text-align: center;
 }
+
 /*
 * {
   outline: 1px solid limegreen !important;
-} 
+}
 */
 
 #btn {
@@ -22,14 +23,13 @@ body {
   align-items: center;
   align-content: center;
   justify-content: center;
-  
 }
 
 #Gryffindor {
   background-image: url("images/ButtonG.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-color:#61020000;
+  background-color: #61020000;
   background-position: center;
   color: white;
   border-radius: 10px;
@@ -44,10 +44,10 @@ body {
   background-image: url("images/buttonR.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-color:#0e3a4800;
+  background-color: #0e3a4800;
   background-position: center;
   border-radius: 10px;
-  padding: 80px 80px;
+  padding: 80px;
   color: white;
   text-align: center;
   display: flex;
@@ -58,16 +58,16 @@ body {
 #Slytherin {
   background-image: url("images/buttonS.png");
   background-repeat: no-repeat;
-  background-color:#07342b00;
+  background-color: #07342b00;
   background-size: contain;
   background-position: center;
   color: black;
   border-radius: 10px;
-  padding: 80px 80px;
+  padding: 80px;
   display: flex;
   justify-content: left;
   margin: 20px;
-  
+
 }
 
 #Hufflepuff {
@@ -75,10 +75,10 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color:#eeb31d00;
+  background-color: #eeb31d00;
   color: black;
   border-radius: 10px;
-  padding: 80px 80px;
+  padding: 80px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -91,23 +91,23 @@ body {
 }
 
 a:link {
-  font-size:25px;
-  color:whitesmoke
+  font-size: 25px;
+  color: whitesmoke
 }
 
 a:visited {
-  font-size:25px;
-  color:rgb(226, 226, 226)
+  font-size: 25px;
+  color: rgb(226, 226, 226)
 }
 
-a:hover{
-  font-size:30px;
-  color:rgb(0, 0, 0)
+a:hover {
+  font-size: 30px;
+  color: rgb(0, 0, 0)
 }
 
 #barraG {
-  background-color:#610200;  
-  color: white;  
+  background-color: #610200;
+  color: white;
   display: flex;
   border-radius: 10px;
   text-align: left;
@@ -116,9 +116,10 @@ a:hover{
   justify-content: left;
   margin: auto;
 }
+
 #barraH {
-  background-color:#eeb31d;
-  color: white;  
+  background-color: #eeb31d;
+  color: white;
   display: flex;
   text-align: left;
   padding: 12px;
@@ -126,9 +127,10 @@ a:hover{
   justify-content: left;
   margin: auto;
 }
+
 #barraR {
-  background-color:#0e3a48;
-  color: white;  
+  background-color: #0e3a48;
+  color: white;
   display: flex;
   text-align: left;
   padding: 12px;
@@ -136,9 +138,10 @@ a:hover{
   justify-content: left;
   margin: auto;
 }
+
 #barraS {
-  background-color:#063b17;
-  color: white;  
+  background-color: #063b17;
+  color: white;
   display: flex;
   text-align: left;
   padding: 12px;
@@ -149,33 +152,34 @@ a:hover{
 
 #Inicio {
   text-align: center;
-  padding: 10px 10px;
+  padding: 10px;
 }
 
 #Clases {
-  text-align: center; 
-  padding: 10px 10px;
+  text-align: center;
+  padding: 10px;
 }
 
 #Hechizos {
-  text-align: center; 
+  text-align: center;
   padding: 10px 10px;
 }
 
 #Pociones {
-  text-align: center; 
+  text-align: center;
   padding: 10px 10px;
 }
 
 #Criaturas_Mágicas {
-  text-align: center; 
+  text-align: center;
   padding: 10px 10px;
 }
 
 #Datos_Curiosos {
-  text-align: center; 
+  text-align: center;
   padding: 10px 10px;
 }
+
 /*FONDOS CASAS*/
 #Fondo_G {
   background-image: url("images/Gryffindor-Background.jpg");
@@ -183,50 +187,55 @@ a:hover{
   background-size: cover;
   background-attachment: fixed;
 }
+
 #Fondo_S {
   background-image: url("images/SlytherinB.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
+
 #Fondo_R {
   background-image: url("images/RavenclawB.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
+
 #Fondo_H {
   background-image: url("images/HufflepuffB.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
+
 #Creado {
 
-text-align: center;
-justify-items:center;
-align-items:center;
-justify-content:center;
-vertical-align: center;
-align-content: center;
-font-size: 20px;
-background-color: rgba(245, 245, 245, 0.19);
-width: 400px;
-padding: 10px;
-border-radius: 10px;
-display: inline;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  align-content: center;
+  font-size: 20px;
+  background-color: rgba(245, 245, 245, 0.19);
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline;
 
 
 }
 
 #libro {
-  justify-items:center;
-  display:flex;
+  justify-items: center;
+  display: flex;
   flex-wrap: wrap;
-  align-items:center;
-  }
+  align-items: center;
+  width: 90%;
+}
 
-#indice{
+#indice {
   align-items: left;
   justify-items: left;
   background-size: cover;
@@ -235,47 +244,137 @@ display: inline;
   width: auto;
 }
 
-#tarjetita{
+#tarjetita {
   background-image: url("images/paper.jpg");
   opacity: 0.9;
   background-color: #4e05049a;
-  padding: 10px;
-  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
   height: 30%;
-  width: 10%;
+  width: 20% !important;
   border-radius: 10px;
-  
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  margin: 25px;
+  padding-top: 15px;
+  overflow: hidden;
+  border-radius: 35px 0px 35px 0px;
+  -moz-border-radius: 35px 0px 35px 0px;
+  -webkit-border-radius: 35px 0px 35px 0px;
+}
+
+#fotoPocion {
+  border-radius: 35px 0px 35px 0px;
+}
+#fotoHechizo {
+  border-radius: 35px 0px 35px 0px;
+}
+#fotoDato {
+  border-radius: 35px 0px 35px 0px;
+}
+#fotoCriatura {
+  border-radius: 35px 0px 35px 0px;
 }
 
 #tituloTarjeta {
   color: rgb(56, 56, 56);
   text-align: center;
-  font-size: 25px;
+  align-content: center;
+  font-size: 30px;
+  display: inline-block;
+  flex-wrap: wrap;
 }
 
-#txtTarjeta{
-  color:aliceblue;
+#txtTarjeta {
+  color: aliceblue;
   font-size: 20px;
 }
 
 #filtro {
-  background-color:  rgb(211, 163, 31);;
-}
+  background-color: rgb(211, 163, 31);
+  ;
+} 
 
 /*botones*/
 
 #botonG {
-	box-shadow:inset 0px 1px 0px 0px #a6827e;
-	background:linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
-	background-color:#7d5d3b;
-	border-radius:10px;
-	border:1px solid #54381e;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Georgia;
-	font-size:28px;
-	padding:7px 17px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #4d3534;
+  box-shadow: inset 0px 1px 0px 0px #a6827e;
+  background: linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+  background-color: #7d5d3b;
+  border-radius: 10px;
+  border: 1px solid #54381e;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Georgia;
+  font-size: 28px;
+  padding: 7px 17px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #4d3534;
 }
+
+#areaBoton {
+  padding-top: 5px;
+  margin: 1%;
+  font-family: Georgia;
+  font-size: 25px;
+}
+
+#seleccion {
+  font-size: 20px;
+}
+
+#botonOK {
+  background: linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+  background-color: #7d5d3b;
+  border-radius: 10px;
+  border: 1px solid #54381e;
+  font-size: 25px;
+  margin: 9px;
+}
+
+.container {
+  width:100%;
+  max-width: 1200px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.container .card{
+  width: 330;
+  height: 430;
+  border-radius: 8px;
+  overflow:hidden ;
+  margin: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.container .card:hover{
+  transform: translate(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img{
+  width: 330px;
+  height: 220px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+
+
+
+

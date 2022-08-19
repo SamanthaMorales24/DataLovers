@@ -1,7 +1,9 @@
 import {
     filtroEspecie,
-    sortAZ,
-    sortZA
+    sortAZC,
+    sortAZP,
+    sortZAC,
+    sortZAP,
 } from './data.js';
 import data from './data/harrypotter/data.js';
 //console.log(data.potions);
@@ -11,11 +13,23 @@ const potions = data.potions;
 const spells = data.spells;
 const funFacts = data.funFacts;
 const noHumanos = filtroEspecie(data.characters);
-//const orderAZ= sortAZ(data.name);
-//const orderZA= sortZA(data.name);
+const orderZAC = sortAZC(data.characters);
+const orderAZC = sortZAC(data.characters);
+const orderAZP = sortAZP(data.potions);
+const orderZAP = sortZAP(data.potions);
+const orderAZH = sortAZP(data.spells);
+const orderZAH = sortZAP(data.spells);
+const orderAZF = sortAZP(data.funFacts);
+const orderZAF = sortZAP(data.funFacts);
 
-//console.log(orderZA);
-//console.log(orderAZ);
+console.log(orderZAC);
+console.log(orderAZC);
+console.log(orderAZP);
+console.log(orderZAP);
+console.log(orderAZH);
+console.log(orderZAH);
+console.log(orderAZF);
+console.log(orderZAF);
 
 // const ordenar = (orden) => {
 // switch (orden) {
@@ -79,7 +93,7 @@ const renderItemSpells = (id) => {
             <p id="txtTarjeta">Mención: ${mencion}</p>
             <p id="txtTarjeta">Etimologia: ${etimologia}</p>
             </span>
-            <button class="leer_btm" id="hideText_btn">Leer más</button>
+            <button class="leer_btn" id="hideText_btn">Leer más</button>
             </div>
         </div> 
         `;
@@ -132,7 +146,7 @@ const renderItemSpecies = (character) => {
 };
 
 
-window.addEventListener("load", indice, true);
+window.addEventListener("load", indice, leerMas, true);
 
 function indice() {
     document.getElementById("pociones").addEventListener("click", function () {
@@ -159,15 +173,15 @@ function indice() {
 
 };
 
-// function leerMas() {
-// let hideText_btn = document.getElementById('hideText_btn');
-// let hideText = document.getElementById('hideText');
-// hideText_btn.addEventListener('click', toggleText);
-//     function toggleText() {
-//         hideText.classList.toggle('show');
-//     }
+function leerMas() {
+    let hideText_btn = document.getElementById('hideText_btn');
+    let hideText = document.getElementById('hideText');
+    hideText_btn.addEventListener('click', toggleText);
+    function toggleText() {
+        hideText.classList.toggle('show');
+    }
 
-// }
+}
 /*
 
 for(let i= 0; i< potions.length; i++ ){

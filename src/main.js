@@ -1,15 +1,17 @@
-import { filtroEspecie, sortAZ, sortZA } from "./data.js";
+import { filtroEspecie, sortAZ, sortZA, sortAZC, sortZAC } from "./data.js";
 import data from "./data/harrypotter/data.js";
-
+//se crean variables con spread para evitar mutaciones
 const characters = [...data.characters];
 const potions = [...data.potions];
 const spells = [...data.spells];
 const funFacts = [...data.funFacts];
-let renderData = [];
-
+// variable para identificar que datos tenemos en pantalla
+let datosEnPantalla = 0;
+// variable limpiar se crea para limpiar la data cuando se cambio de seccion
 const limpiar = `<div></div>`;
-const noHumanos = filtroEspecie(characters);
 
+const noHumanos = filtroEspecie(characters);
+// renderItem toma la data y la muestra en pantalla, se crea una para cada tipo de dato y se arman las tarjetas de informacion con html
 const renderItemPotions = (data) => {
   let id = data.id - 1;
   let nombre = potions[id].name;
@@ -28,7 +30,7 @@ const renderItemPotions = (data) => {
     `;
 
   document.getElementById("libro").innerHTML += poster;
-  renderData[id] = data;
+  datosEnPantalla = 1; // identificador para cambiar el orden de la data por orden alfabetico
 };
 
 const renderItemSpells = (data) => {
@@ -63,7 +65,7 @@ const renderItemSpells = (data) => {
         `;
 
   document.getElementById("libro").innerHTML += poster;
-  renderData[id] = data;
+  datosEnPantalla = 2;
 };
 
 const renderItemFunFacts = (data) => {
@@ -83,7 +85,7 @@ const renderItemFunFacts = (data) => {
         `;
 
   document.getElementById("libro").innerHTML += poster;
-  renderData[id] = data;
+  datosEnPantalla = 3;
 };
 
 const renderItemSpecies = (data) => {
@@ -105,77 +107,117 @@ const renderItemSpecies = (data) => {
        `;
 
   document.getElementById("libro").innerHTML += poster;
-  renderData[id] = data;
+  datosEnPantalla = 4;
 };
-
+// se  crean las funciones
 window.addEventListener("load", indice, leerMas, true);
 
 function indice() {
   document.getElementById("pociones").addEventListener("click", function () {
     data.pociones = document.getElementById("libro").value;
     document.getElementById("libro").innerHTML = limpiar;
-    renderData = [];
     potions.forEach((e) => renderItemPotions(e));
-    console.log(renderData);
   });
 
   document.getElementById("hechizos").addEventListener("click", function () {
     data.spells = document.getElementById("libro").value;
     document.getElementById("libro").innerHTML = limpiar;
-    renderData = [];
     spells.forEach((e) => renderItemSpells(e));
-    console.log(renderData);
   });
   document
     .getElementById("datosCuriosos")
     .addEventListener("click", function () {
       data.facts = document.getElementById("libro").value;
       document.getElementById("libro").innerHTML = limpiar;
-      renderData = [];
       funFacts.forEach((e) => renderItemFunFacts(e));
-      console.log(renderData);
     });
   document.getElementById("criaturas").addEventListener("click", function () {
     data.characters = document.getElementById("libro").value;
     document.getElementById("libro").innerHTML = limpiar;
-    renderData = [];
     noHumanos.forEach((e) => renderItemSpecies(e));
-    console.log(renderData);
   });
 
- 
-  let select = document.querySelector('.seleccionOrden');
+  // se crea funcionon para ordenar de la A-Z, Z-A
+  let select = document.querySelector(".seleccionOrden");
 
-  select.addEventListener('change', (event) => {
-      let resultado = event.target.value;
-      console.log(resultado)
-      
-      switch (resultado) {
-        case 'az':
-          renderData = sortAZ(renderData);
-          document.getElementById("libro").innerHTML = limpiar;
-          data.az = document.getElementById("libro").value;
-          renderData.forEach((e) => renderItemPotions(e));
-          break;
-        case 'za':
-          renderData = sortZA(renderData);
-          document.getElementById("libro").innerHTML = limpiar;
-          data.za = document.getElementById("libro").value;
-          renderData.forEach((e) => renderItemPotions(e));
-          break;
-      }
+  select.addEventListener("change", (event) => {
+    let resultado = event.target.value;
+    console.log(resultado);
+    let renderData = [];
+
+    switch (datosEnPantalla) {
+      case 1:
+        switch (resultado) {
+          case "az":
+            renderData = sortAZ(potions);
+            document.getElementById("libro").innerHTML = limpiar;
+            data.az = document.getElementById("libro").value;
+            renderData.forEach((e) => renderItemPotions(e));
+            break;
+          case "za":
+            renderData = sortZA(potions);
+            document.getElementById("libro").innerHTML = limpiar;
+            data.za = document.getElementById("libro").value;
+            renderData.forEach((e) => renderItemPotions(e));
+            break;
+        }
+
+        break;
+
+      case 2:
+        switch (resultado) {
+          case "az":
+            renderData = sortAZ(spells);
+            document.getElementById("libro").innerHTML = limpiar;
+            data.az = document.getElementById("libro").value;
+            renderData.forEach((e) => renderItemSpells(e));
+            break;
+          case "za":
+            console.log("aqui");
+            renderData = sortZA(spells);
+            document.getElementById("libro").innerHTML = limpiar;
+            data.za = document.getElementById("libro").value;
+            renderData.forEach((e) => renderItemSpells(e));
+            break;
+        }
+
+        break;
+      case 3:
+        switch (resultado) {
+          case "az":
+            renderData = sortAZC(funFacts);
+            document.getElementById("libro").innerHTML = limpiar;
+            data.az = document.getElementById("libro").value;
+            renderData.forEach((e) => renderItemFunFacts(e));
+            break;
+          case "za":
+            renderData = sortZAC(funFacts);
+            document.getElementById("libro").innerHTML = limpiar;
+            data.za = document.getElementById("libro").value;
+            renderData.forEach((e) => renderItemFunFacts(e));
+            break;
+        }
+        break;
+      case 4:
+        switch (resultado) {
+          case "az":
+            renderData = sortAZ(noHumanos);
+            document.getElementById("libro").innerHTML = limpiar;
+            data.az = document.getElementById("libro").value;
+            renderData.forEach((e) => renderItemSpecies(e));
+            break;
+          case "za":
+            renderData = sortZA(noHumanos);
+            document.getElementById("libro").innerHTML = limpiar;
+            data.za = document.getElementById("libro").value;
+            renderData.forEach((e) => renderItemSpecies(e));
+            break;
+        }
+        break;
+      case 0:
+        break;
+    }
   });
-  //document.getElementById("botonOK").addEventListener("click", function () {
-  // primero identificar que opcion del select está seleccionada
-  // hacer un if para identificar que sort usar
-  // if (opcionSeleccionada = "az") {
-  //     let orderAZ = sortAZ(renderData);
-  //     orderAZ.forEach((e) => renderItemPotions(e));
-  // } else {
-  //     let orderZA = sortZA(renderData);
-  //     orderZA.forEach((e) => renderItemPotions(e));
-  //     }
-  //});
 }
 
 function leerMas() {

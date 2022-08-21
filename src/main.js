@@ -24,7 +24,7 @@ const renderItemPotions = (data) => {
         <img id="fotoPocion" src= "./images/pocioncita.jpg" width="350" height="350">
         <h2 id="tituloTarjeta"> ${nombre}</h2>
         <p id="txtTarjeta">Descripción: ${descripcion}</p>
-        <a href="#">Leer más</a>
+        
         </div>
     </div> 
     `;
@@ -37,9 +37,6 @@ const renderItemSpells = (data) => {
   let id = data.id - 1;
   let nombre = spells[id].name;
   let otroNombre = spells[id].other_name;
-  if (otroNombre === null) {
-    otroNombre = "Información no disponible";
-  }
   let pronunciacion = spells[id].pronunciation;
   let tipoHechizo = spells[id].spell_type;
   let descripcion = spells[id].description;
@@ -51,15 +48,14 @@ const renderItemSpells = (data) => {
     <div class="card">
     <img id="fotoHechizo" src= "./images/hechizofoto.jpg" width="350" height="350">
             <h2 id="tituloTarjeta"> ${nombre}</h2>
-            <p id="txtTarjeta">Nombre Alternativo: ${otroNombre}</p>
-            <span class="hide" id="hideText>
+            <p id="txtTarjeta">Nombre Alternativo: ${otroNombre}</p>           
             <p id="txtTarjeta">Pronunciacion: ${pronunciacion}</p>
             <p id="txtTarjeta">Tipo de Hechizo: ${tipoHechizo}</p>
             <p id="txtTarjeta">Descripción: ${descripcion}</p>
             <p id="txtTarjeta">Mención: ${mencion}</p>
             <p id="txtTarjeta">Etimologia: ${etimologia}</p>
-            </span>
-            <button class="leer_btn" id="hideText_btn">Leer más</button>
+           
+            
             </div>
         </div> 
         `;
@@ -110,7 +106,7 @@ const renderItemSpecies = (data) => {
   datosEnPantalla = 4;
 };
 // se  crean las funciones
-window.addEventListener("load", indice, leerMas, true);
+window.addEventListener("load", indice, true);
 
 function indice() {
   document.getElementById("pociones").addEventListener("click", function () {
@@ -136,6 +132,8 @@ function indice() {
     document.getElementById("libro").innerHTML = limpiar;
     noHumanos.forEach((e) => renderItemSpecies(e));
   });
+
+ 
 
   // se crea funcionon para ordenar de la A-Z, Z-A
   let select = document.querySelector(".seleccionOrden");
@@ -220,11 +218,16 @@ function indice() {
   });
 }
 
-function leerMas() {
-  let hideText_btn = document.getElementById("hideText_btn");
-  let hideText = document.getElementById("hideText");
-  hideText_btn.addEventListener("click", toggleText);
-  function toggleText() {
-    hideText.classList.toggle("show");
+window.addEventListener("load", vermas, true);
+
+function vermas(id){
+  if(id=="mas"){
+  document.getElementById("desplegar").style.display="block";   
+  document.getElementById("mas").style.display="none"; 
   }
-}
+  else{
+  document.getElementById("desplegar").style.display="none";
+  document.getElementById("mas").style.display="inline";
+  }
+  }
+

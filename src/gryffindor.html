@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <title>Gryffindor</title>
 </head>
 
@@ -11,45 +12,55 @@
     <header id="barraG">
         <nav id="indice">
             <ul>
-        <button id="botonG"> <img src="./images/castle.png"
-            width="40" height="40" style="vertical-align:center"> <a href="index.html" id="Inicio">Inicio</a></button>
-        <button id="botonG"> <img src="./images/cauldron.png"
-            width="40" height="40" style="vertical-align:center"> <a href="#libro" id="pociones">Pociones</a></button>
-         <button id="botonG"> <img src="./images/magic-wand.png"
-            width="40" height="40" style="vertical-align:center"> <a href="#libro" id="hechizos">Hechizos</a></button>
-        <button id="botonG"> <img src="./images/dragon.png"
-            width="40" height="40" style="vertical-align:center"> <a href="#libro" id="criaturas" >Criaturas Mágicas</a></button>
-        <button id="botonG"> <img src="./images/spell-book.png"
-            width="40" height="40" style="vertical-align:center"> <a href="#libro" id="datosCuriosos" >Datos Curiosos</a></button>
+                <button id="botonG"> <img src="./images/castle.png" width="40" height="40"
+                        style="vertical-align:center"> <a href="index.html" id="Inicio">Inicio</a></button>
+                <button id="botonG"> <img src="./images/cauldron.png" width="40" height="40"
+                        style="vertical-align:center"> <a href="#libro" id="pociones">Pociones</a></button>
+                <button id="botonG"> <img src="./images/magic-wand.png" width="40" height="40"
+                        style="vertical-align:center"> <a href="#libro" id="hechizos">Hechizos</a></button>
+                <button id="botonG"> <img src="./images/dragon.png" width="40" height="40"
+                        style="vertical-align:center"> <a href="#libro" id="criaturas">Criaturas Mágicas</a></button>
+                <button id="botonG"> <img src="./images/spell-book.png" width="40" height="40"
+                        style="vertical-align:center"> <a href="#libro" id="datosCuriosos">Datos Curiosos</a></button>
         </nav>
-      </ul>
-    </nav>
-</header>
-<section id="areaBoton">
-<form>
-    <label for="orden">Ordenar por:</label>
-    <select id="seleccion" name="ordenarA" >
-      <option value="aZ">A-Z</option>
-      <option value="zA">Z-A</option>
-    </select>
-   
-    <input id="botonOK" type="submit" value="OK">
-  </form>
-</section>
+        </ul>
+        </nav>
+    </header>
+    <section id="areaBoton">
+
+        <label for="orden">Ordenar por:</label>
+        <select id="seleccion" onchange="ordenarFuncion()">
+            <option class="az" value="az">A-Z</option>
+            <option class="za" value="za">Z-A</option>
+        </select>
+
+        <p id="demo"></p>
+
+        <script>
+            function ordenarFuncion() {
+                let select = document.getElementById("seleccion").value;
+                document.getElementById("demo").innerHTML = "Ordenando por " + select;
+                console.log(select);
+            }
+        </script>
+
+
+
+    </section>
     <nav id="filtro">
-        
+
     </nav>
 
-     <section id="libro"> 
-     </section>
-       
+    <section id="libro">
+    </section>
 
-        <script src="main.js" type="module"></script>
-       
-        
-     <footer id="Creado">Creado por Romina V <img src="./images/lunita.png"
-        width="18" height="18" style="vertical-align:center"> y Samantha M. <img
-        src="./images/unicorn.png" width="20" height="20"
-        style="vertical-align:center"> </footer>
+
+    <script src="main.js" type="module"></script>
+
+
+    <footer id="Creado">Creado por Romina V <img src="./images/lunita.png" width="18" height="18"
+            style="vertical-align:center"> y Samantha M. <img src="./images/unicorn.png" width="20" height="20"
+            style="vertical-align:center"> </footer>
 </body>
+
 </html>

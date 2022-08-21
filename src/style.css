@@ -339,13 +339,13 @@ a:hover {
 }
 
 .container {
-  width: 1000px;
-  height: 600px;
+  width: 500px;
+  height: 400px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-  background-color: #063b17;
+  
 }
 
 .container .card {

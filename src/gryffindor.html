@@ -29,20 +29,23 @@
     <section id="areaBoton">
 
         <label for="orden">Ordenar por:</label>
-        <select id="seleccion" onchange="ordenarFuncion()">
+        <select class="seleccionOrden" name="seleccionOrden" id="seleccion" >
             <option class="az" value="az">A-Z</option>
             <option class="za" value="za">Z-A</option>
         </select>
 
         <p id="demo"></p>
 
-        <script>
+        <!-- <script>
             function ordenarFuncion() {
                 let select = document.getElementById("seleccion").value;
                 document.getElementById("demo").innerHTML = "Ordenando por " + select;
                 console.log(select);
+                if(){
+
+                }
             }
-        </script>
+        </script> -->
 
 
 

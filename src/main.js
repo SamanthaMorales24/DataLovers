@@ -105,7 +105,7 @@ const renderItemSpecies = (data) => {
   document.getElementById("libro").innerHTML += poster;
   datosEnPantalla = 4;
 };
-// se  crean las funciones
+// se  crean las funciones del inidice 
 window.addEventListener("load", indice, true);
 
 function indice() {
@@ -120,9 +120,7 @@ function indice() {
     document.getElementById("libro").innerHTML = limpiar;
     spells.forEach((e) => renderItemSpells(e));
   });
-  document
-    .getElementById("datosCuriosos")
-    .addEventListener("click", function () {
+  document.getElementById("datosCuriosos").addEventListener("click", function () {
       data.facts = document.getElementById("libro").value;
       document.getElementById("libro").innerHTML = limpiar;
       funFacts.forEach((e) => renderItemFunFacts(e));
@@ -218,16 +216,6 @@ function indice() {
   });
 }
 
-window.addEventListener("load", vermas, true);
 
-function vermas(id){
-  if(id=="mas"){
-  document.getElementById("desplegar").style.display="block";   
-  document.getElementById("mas").style.display="none"; 
-  }
-  else{
-  document.getElementById("desplegar").style.display="none";
-  document.getElementById("mas").style.display="inline";
-  }
-  }
+
 

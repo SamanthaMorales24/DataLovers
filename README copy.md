@@ -7,21 +7,21 @@ La página busca ser una herramienta donde pueda encontrar rápidamente y de man
 # 2.- Historias de usuario
 Posterior a decidir hacer el proyecto de Harry Potter, y a realizar un formulario que fue rellenado por alrededor de 40 personas, consideramos que la página debía ir orientada a gente que disfruta y conoce el mundo de Harry Potter. Nos llamó la atención que muchos recordaban detalles de criaturas, clases o profesores muy específicos y esto nos hizo re-enfocar el proyecto  y cómo trabajaríamos la data entregada.
 
-<img src="./images/Qhechizos.png">
-<img src="./images/Qpociones.png">
+![](src/images/Qhechizos.png)
+![](src/images/Qpociones.png)
+
 
 ## Diseño de la Interfaz de Usuario
 ### Prototipos de baja fidelidad
 
 Primeras ideas que se generaron respecto a nuestros objetivos planteados.
-
+![](src/images/PBF1.png)
 
 ### Prototipos de alta fidelidad
 Realizamos en Figma un prototipo para orientarnos en cómo queríamos entregar la información a nuestros usuarios.
-<img src="./images/PAF1.png">
-<img src="./images/PAF2.png">
-<img src="./images/PAF3.png">
-
+![](src/images/PAF1.png)
+![](src/images/PAF2.png)
+![](src/images/PAF3.png)
 
 # 3.-Objetivos de aprendizaje abordados
 

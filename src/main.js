@@ -1,6 +1,6 @@
 import { filtroEspecie, sortAZ, sortZA, sortAZC, sortZAC } from "./data.js";
 import data from "./data/harrypotter/data.js";
-//se crean variables con spread para evitar mutaciones
+//se crean variables con spread para mejor orden de la data.
 const characters = [...data.characters];
 const potions = [...data.potions];
 const spells = [...data.spells];
@@ -121,21 +121,20 @@ function indice() {
     spells.forEach((e) => renderItemSpells(e));
   });
   document.getElementById("datosCuriosos").addEventListener("click", function () {
-      data.facts = document.getElementById("libro").value;
-      document.getElementById("libro").innerHTML = limpiar;
-      funFacts.forEach((e) => renderItemFunFacts(e));
-    });
+    data.facts = document.getElementById("libro").value;
+    document.getElementById("libro").innerHTML = limpiar;
+    funFacts.forEach((e) => renderItemFunFacts(e));
+  });
   document.getElementById("criaturas").addEventListener("click", function () {
     data.characters = document.getElementById("libro").value;
     document.getElementById("libro").innerHTML = limpiar;
     noHumanos.forEach((e) => renderItemSpecies(e));
   });
 
- 
 
-  // se crea funcionon para ordenar de la A-Z, Z-A
+
+  // se crea funcion para ordenar de la A-Z, Z-A
   let select = document.querySelector(".seleccionOrden");
-
   select.addEventListener("change", (event) => {
     let resultado = event.target.value;
     console.log(resultado);
@@ -169,7 +168,6 @@ function indice() {
             renderData.forEach((e) => renderItemSpells(e));
             break;
           case "za":
-            console.log("aqui");
             renderData = sortZA(spells);
             document.getElementById("libro").innerHTML = limpiar;
             data.za = document.getElementById("libro").value;
